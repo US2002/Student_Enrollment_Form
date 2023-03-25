@@ -115,7 +115,6 @@ function validateEnrollmentDate() {
 
     //Enrollment date should be greater than Birth date
     return inputBirthDate.getTime() < inputEnrollmentDate.getTime();
-
 }
 
 //Function to check validity of user input data
@@ -257,6 +256,7 @@ function saveData() {
 
     // create PUT Request object
     var putRequest = createPUTRequest(connectionToken, jsonStrObj, studentDatabaseName, studentRelationName);
+
     jQuery.ajaxSetup({ async: false });
 
     //Make PUT Request for saving data into database
@@ -270,8 +270,6 @@ function saveData() {
     }
     //After saving to databse resent from data 
     resetForm();
-
-    $('#empid').focus();
 }
 
 
@@ -297,7 +295,6 @@ function changeData() {
 
     //After updating to databse resent from data
     resetForm();
-    $('#empid').focus();
 }
 
 
